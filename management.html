@@ -1,58 +1,88 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<!--
+  Name: Nikhita Kannam, Christen De Ocampo
+  Date: 04/20/2021
+  Section: CSCI 355
+
+  This is the management.html page for the QCfirst website.
+-->
+<html class="bg-instr" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>QCFirst</title>
-    <link href="" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
     <body>
         <main>
-            <header>
+            <header class = "header">
                 <div class="content-wrap">
-                    <img src="img/Education_Guide_Logo_Round.png" alt="logo" width="150" height="150">
-                    <h1>Course Management</h1>
-                    <a class="btn" href="index.html">Sign Out</a>
+                    <a href="instr-home.html"><img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150"></a>
+                    <h1 id="title-style">QCFirst</h1>
+                </div>
+                <div class="navbar">
+                    <a href="instr-home.html">Instructor Home</a>
+                    <a class="active" href="management.html">Course Management</a>      
+                    <a href="index.html">Sign Out</a>               
                 </div>
             </header>
-            <section class="welcome">
+            <div class="content-wrap">
+                <h2 id="background">Manage Courses</h2>
+            </div>
+            <section class="section-wrap">
                 <div class="content-wrap">
-                    <h1>Manage Courses</h1>
+                    <div id="courses-bg">
+                        <h2 class="instr-courses" id="background">Courses
+                            <input id="search-bar" type="text" placeholder="Search For Course...">
+                            <img id="img-search-bar" src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
+                        </h2>
+                        <div class="scroll">
+                            <div class="course-stuff">
+                                <button class="course-collapse">Course Name #1</button>
+                                <div class="content">
+                                    <nav>
+                                        <ul id="instr-list"> 
+                                            <li>ID: 001</li>
+                                            <li>Semester: Fall 2021</li>
+                                            <li>Department: Masters of Dark Art</li>
+                                            <li>Instructor: John Constantine</li>
+                                            <li>Roster of Students: 25</li>
+                                            <li>Description: Prepare mate.</li>
+                                            <li>Schedule: M T W T F</li>
+                                            <li>Capacity: 0</li>
+                                            <li>Enrollment Deadline: June 25, 2021</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <button class="course-collapse">Course Name #2</button>
+                                <nav>
+                                    <ul id="instr-list"> 
+                                        <li>ID: 002</li>
+                                        <li>Semester: Fall 2021</li>
+                                        <li>Department: Math</li>
+                                        <li>Instructor: Britney Spears</li>
+                                        <li>Roster of Students: 100</li>
+                                        <li>Description: Math is fun. But wear masks.</li>
+                                        <li>Schedule: M T W T F</li>
+                                        <li>Capacity: 100</li>
+                                        <li>Enrollment Deadline: June 25, 2021</li>
+                                    </ul>
+                                </nav>
+                                <button class="course-collapse">Course Name #3</button>
+                                <ul></ul>
+                                <button class="course-collapse">Course Name #4</button>
+                                <ul></ul>
+                                <button class="course-collapse">Course Name #5</button>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <a class="btn" href="instr-createcourse.html">Create Course</a>
+                        <a class="btn" href="management.html">Delete Course</a>
+                        <a class="btn" href="instr-home.html">Back</a>
+                    </div> 
                 </div>
             </section>
-            <section class="sign-in">
-                <div class="content-wrap">
-                    <h2>Courses</h2>
-                    <input type="text" placeholder="Search For Course...">
-                    <img src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
-                    <div class="scroll">
-                        <div class="course-stuff">
-                            <p>Course Name #1:</p>
-                            <ul>
-                                <li>ID: 777</li>
-                                <li>Semester: Fall 2021</li>
-                                <li>Department: Math</li>
-                                <li>Instructor: Britney Spears</li>
-                                <li>Roster of Students: 100</li>
-                                <li>Description: Wear masks.</li>
-                                <li>Schedule: M T W T F</li>
-                                <li>Capacity: 100</li>
-                                <li>Enrollment Deadline: June 25, 2021</li>
-                            </ul>
-                            <p>Course Name #2:</p>
-                            <ul></ul>
-                            <p>Course Name #3:</p>
-                            <ul></ul>
-                            <p>Course Name #4:</p>
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <a class="btn" href="instr-createcourse.html">Create Course</a>
-                    <a class="btn" href="management.html">Delete Course</a>
-                    <a class="btn" href="instr-home.html">Back</a>
-                </div> 
-            </section>
-            <footer>
-                <p>Coypright &#169 2021: By NC</p>
+            <footer class = "footer">
+                <p>Copyright &#169; 2021: By NC</p>
             </footer>
         </main>
     </body>

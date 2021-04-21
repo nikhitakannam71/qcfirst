@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<!--
+  Name: Nikhita Kannam, Christen De Ocampo
+  Date: 04/20/2021
+  Section: CSCI 355
+
+  This is the enrollment.html page for the QCfirst website.
+-->
+<html class = "bg-student" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>QCFirst</title>
-    <link href="" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
     <body>
         <main>
-            <header>
+            <header class = "header">
                 <div class="content-wrap">
-                    <img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150">
-                    <h1>Enrollment Page</h1>
-                    <a class="btn" href="index.html">Sign Out</a>
+                    <a href="student-home.html"><img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150"></a>
+                    <h1 id="title-style">QCFirst</h1>
+                </div>
+                <div class="navbar">
+                    <a href="student-home.html">Student Home</a>
+                    <a class = "active" href="enrollment.html">Enrollment Page</a> 
+                    <a href="index.html">Sign Out</a>
                 </div>
             </header>
-            <section class="welcome">
-                <div class="content-wrap">
-                    <h3>Search for courses below. Select the courses you wish to enroll in and click "Enroll"
-                    </br></h3>
-                </div>
-            </section>
-            <section class = "sign-in">
-                <section class="search-course">
+            <div class="content-wrap">
+                <h4 id = "background-1">Search for courses below. Select the courses you wish to enroll in and click "Enroll"
+                <br></h4>
+            </div>
+            <section>
+                <section class = "section-wrap" id="search-course">
                     <div class="content-wrap">
                         <input type="text" placeholder="Search For Course...">
-                        <img src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
+                        <img src = "img/magnifying-glass-4186151_640.png" alt="searchbar" width="40" height="40">
                     </div>
-                </section>
-                <section class = "enroll">
-                    <div class="content-wrap">
-                    <ul>
-                        Course #1<br>
-                        Course #2
-                    </ul>
-                    <button type = "button"> Enroll </button>
+                    <div class="content-wrap" >
+                        <ul>
+                            <li id = "courselist">Course #1</li><br>
+                            <li id = "courselist">Course #2</li><br>
+                            <li id = "courselist">Course #3</li><br>
+                        </ul>  
                     </div>
+                    <a class="btn">Enroll</a>
                 </section>
-                <section class = "schedule">
+                <h3 id = "background-1"> Schedule </h3>
+                <section class = "section-wrap" id="enrollment-wrap">
                     <div class="content-wrap">
-                        <h3> Schedule </h3>
-                        <ol>
-                            Course #1 9:15AM to 10:30AM MW<br>
-                            Course #2 1:40PM to 2:55PM MW<br>    
-                            Course #3 12:00PM to 1:15PM TT<br>
-                            Course #4 1:40PM to 3:30PM TT<br>
+                        <ol class = "schedule-1">
+                            <li>Course #1 9:15AM to 10:30AM MW</li>
+                            <li>Course #2 1:40PM to 2:55PM MW</li>   
+                            <li>Course #3 12:00PM to 1:15PM TT</li>
+                            <li>Course #4 1:40PM to 3:30PM TT</li>
+                            <li>Course #5 2:00PM to 4:30PM F</li>
                         </ol>
                     </div>
+                    <a class="btn" href="student-home.html">Back</a>
                 </section>
-                <a class="btn" href="student-home.html">Back</a>
-                </div>
             </section>
-            <footer>
-                <p>Coypright &#169 2021: By NC</p>
+            <footer class = "footer">
+                <p>Copyright &#169; 2021: By NC</p>
             </footer>
         </main>
     </body>

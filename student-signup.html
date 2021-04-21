@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<!--
+  Name: Nikhita Kannam, Christen De Ocampo
+  Date: 04/20/2021
+  Section: CSCI 355
+
+  This is the student-signup.html page for the QCfirst website.
+-->
+<html class = "bg-image" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>QCFirst</title>
-    <link href="" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
     <body>
         <main>
-            <header>
+            <header class = "header">
                 <div class="content-wrap">
-                    <img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150">
-                    <h1>Student Sign Up</h1>
+                    <a href="index.html"><img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150"></a>
+                    <h1 id="title-style">QCFirst</h1>
+                </div>
+                <div class="navbar">
+                    <a href="index.html">Sign In</a> 
+                    <a href="instr-signup.html">Intructor Sign Up In</a>
+                    <a class="active" href="student-signup.html">Student Sign Up</a>
                 </div>
             </header>
-            <section class="welcome">
+            <div class="content-wrap">
+                 <h2 id = "background">Enter your information below to create an account</h2>
+            </div>
+            <section class="section-wrap">
                 <div class="content-wrap">
-                    <h2>Enter your information below to create an account</h2>
-                </div>
-            </section>
-            <section class="sign-in">
-                <div class="content-wrap">
-                    <form>
+                    <form id = "align">
                         <label for = "first-name">First Name: </label>
                         <input type = "text" id = "first-name"><br>
                         <label for="last-name">Last Name: </label>
@@ -31,12 +41,12 @@
                         <input type="text" id="password"><br>
                         <label for="confirm-pass">Confirm Password: </label>
                         <input type="text" id="confirm-pass"><br>
+                        <a class="btn" href="student-home.html">Enter</a>
                     </form>
-                 <a class="btn" href="student-home.html">Enter</a>
                 </div> 
             </section>
-            <footer>
-                <p>Coypright &#169 2021: By NC</p>
+            <footer class = "footer">
+                <p>Copyright &#169; 2021: By NC</p>
             </footer>
         </main>
     </body>

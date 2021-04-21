@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<!--
+  Name: Nikhita Kannam, Christen De Ocampo
+  Date: 04/20/2021
+  Section: CSCI 355
+
+  This is the index.html page for the QCfirst website.
+-->
+<html class = "bg-image" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>QCFirst</title>
-    <link href="" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
     <body>
         <main>
-            <header>
+            <header class="header">
                 <div class="content-wrap">
-                    <img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150">
-                    <h1>Sign In</h1>
+                    <a href="index.html"><img src="img/Education_Guide_Logo_Round.png" alt="haha" width="150" height="150"></a>
+                    <h1 id="title-style">QCFirst</h1>
+                </div>
+                <div class="navbar">
+                    <a class="active" href="index.html">Sign In</a>      
                 </div>
             </header>
-            <section class="welcome">
-                <div class="content-wrap">
-                    <h1>Welcome!</h1>
-                </div>
-            </section>
-            <section class="sign-in">
-                <div class="content-wrap">
+            <div class="content-wrap">
+                <h2 id="background">Welcome!</h2>
+            </div>
+            <section class="section-wrap">
+                <div class="content-wrap" id="bg-image">
                     <form>
-                        <img src="img/education-5396389_640.png" alt="hahan" width="75" height="100"><br>
-                        <label for="Username">Username: </label>
+                        <img src="img/education-5396389_640.png" alt="education" width="75" height="100"><br>
+                        <label for="username">Username: </label>
                         <input type="text" id="username"><br><br>
                         <label for="password">Password: </label>
                         <input type="text" id="password"><br><br>
                         <a class="btn" href="">Enter</a>
                     </form>
-                    <h3> New user? Sign up here: </h3>
+                    <h3> New User? Sign Up Here: </h3>
                     <a class="btn" href="student-signup.html">Student</a>
                     <a class="btn" href="instr-signup.html">Instructor</a>
                 </div> 
             </section>
-            <footer>
-                <p>Coypright &#169 2021: By NC</p>
+            <footer class = "footer">
+                <p>Copyright &#169; 2021: By NC</p>
             </footer>
         </main>
     </body>
