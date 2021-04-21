@@ -5,6 +5,7 @@
 > * [Purpose of the Website](#purpose-of-the-website)
 > * [Website Link and Contributions](#website-link-and-contributions)
 > * [Features](#features)
+> * [Visual Design V.S Final Design](#Visual-Design-V.S-Final-Design)
 > * [Desktop](#desktop)
 > * [Tablet](#tablet)
 > * [Mobile](#mobile)
@@ -27,6 +28,16 @@ The purpose of **QCfirst** is to allow students to view their courses and enroll
 * **Enrollment Page:** This page allows students to search and enroll in new classes. Enter the course in the search bar. Once the user finds the course they are looking for they can select that course and click *Enroll*. Students can also view their updated schedule. 
 * **Course Management Page:** Strictly for instructors; they can create and delete any desired course by clicking on the appropriate buttons below the list of courses that's displayed. To find a *specific course*, instructors can type the course name in the search text box. To find more information about a course, such as its unique number, department, description, enrolmment deadline, and etc. click on the *arrow down* button next to the course name to reveal a dropdown that contains these unique information. 
 * **Create Course Page:** Strictly for instructors. This page allows instructors to create a new course. They have to enter the course information such as course ID, department, description, capacity, etc. After entering their information, the instructor can click *Create Course* to create a new course. 
+
+
+## Visual Design V.S Final Design
+* **Color** - The colors in the final design are more appealing and modern. Some sections had a black background and were transparent. This was to make it easier for users to read text and for the site to appear more organized. 
+* **Background images** - Added them for each appropriate page in the final design since we thought the pages looked too basic and lacked an aesthetic vibe. 
+* **Logo** - We had to choose a Logo that does not violate copyright laws. 
+* **Navigation Bar** - We added a navigation bar to make it easier for users to navigate between different pages. 
+* **Ability to switch between rosters** - In the instructor home page, we added an option in each course for instructors to choose between which course student roster they want to switch to.
+* **IDs and Classes to tags** - We added a CSS class and/or id to each one of our div and section tags to follow the semantic HTML design criteria.
+
 
 ## Desktop
 
