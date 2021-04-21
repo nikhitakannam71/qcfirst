@@ -5,7 +5,7 @@
 > * [Purpose of the Website](#purpose-of-the-website)
 > * [Website Link and Contributions](#website-link-and-contributions)
 > * [Features](#features)
-> * [Visual Design V.S Final Design](#visual-design-v.s-final-design)
+> * [Visual Design VS Final Design](#visual-design-vs-final-design)
 > * [Desktop](#desktop)
 > * [Tablet](#tablet)
 > * [Mobile](#mobile)
@@ -30,7 +30,7 @@ The purpose of **QCfirst** is to allow students to view their courses and enroll
 * **Create Course Page:** Strictly for instructors. This page allows instructors to create a new course. They have to enter the course information such as course ID, department, description, capacity, etc. After entering their information, the instructor can click *Create Course* to create a new course. 
 
 
-## Visual Design V.S Final Design
+## Visual Design VS Final Design
 * **Color** - The colors in the final design are more appealing and modern. Some sections had a black background and were transparent. This was to make it easier for users to read text and for the site to appear more organized. 
 * **Background images** - Added them for each appropriate page in the final design since we thought the pages looked too basic and lacked an aesthetic vibe. 
 * **Logo** - We had to choose a Logo that does not violate copyright laws. 
