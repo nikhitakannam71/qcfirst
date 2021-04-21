@@ -5,7 +5,7 @@
 > * [Purpose of the Website](#purpose-of-the-website)
 > * [Website Link and Contributions](#website-link-and-contributions)
 > * [Features](#features)
-> * [Visual Design V.S Final Design](#Visual-Design-V.S-Final-Design)
+> * [Visual Design V.S Final Design](#visual-design-v.s-final-design)
 > * [Desktop](#desktop)
 > * [Tablet](#tablet)
 > * [Mobile](#mobile)
