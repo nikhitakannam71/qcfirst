@@ -93,7 +93,7 @@ li {
     margin: 10px 0;
 }
 #instr-courses {
-    text-align: center;
+    text-align: middle;
     background-color: #5680E9;
     list-style: none;
     color: white;
@@ -165,28 +165,6 @@ input[type=text] {
 #create-left {
     text-align: left;
 }
-
-/* .navbar {
-  background-color: #333;
-  overflow: hidden;
-}
-.navbar a {
-    float: left;
-    color: #f2f2f2;
-    padding: 14px 16px;
-    text-align: center;
-    font-size: 17px;
-    text-decoration: none;
-}
-.navbar a:hover {
-    background-color: white;
-    color: black;
-}
-.navbar a.active {
-    background-color: #5680E9;
-    color: white;
-} */
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -278,10 +256,6 @@ input[type=text] {
         max-width: 100%;
         height: auto;
     }
-    /* ul #background {
-        text-align: center;
-        font-size: 9px;
-    } */
 }
 #align {
     font-size: 18px;
@@ -303,7 +277,7 @@ input[type="password"] {
     display: inline-block;
     color: white;
     font-size: 18px;
-    font-weight: bold;
+    font: bold;
     width: 60%;
     text-align: left;
     border-width: 5px;
@@ -315,7 +289,7 @@ input[type="password"] {
     background-color: #e3f1ff;
     border-radius: 10px;
     color: black;
-    font-weight: bold;
+    font: bold;
     font-size: 16px;
     margin: 10px;
     padding: 10px;

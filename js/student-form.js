@@ -23,7 +23,7 @@ function signUp() {
     .catch(error => {
         if (error.code === 'auth/email-already-in-use') {
             alert('Email is already registered. Redirecting you to Student Sign In page...');
-            window.location.href = "../student-signIn.html";
+            window.location.href = "student-signIn.html";
             return;
         }
     })
@@ -36,7 +36,7 @@ function signIn() {
     const promise = auth.signInWithEmailAndPassword(email.value, password.value)
     .then((response) => {
         alert("Success");
-        window.location.href = "../student-home.html";
+        window.location.href = "student-home.html";
     })
     .catch((error) => {
         if (error.code === 'auth/wrong-password') {
@@ -49,7 +49,7 @@ function signIn() {
 }
 
 function signOut() {
-    FirebaseAuth.getInstance().signOut();
+    auth.signOut();
     alert("Signed Out");
 }
 
