@@ -3,7 +3,6 @@
   Name: Nikhita Kannam, Christen De Ocampo
   Date: 04/20/2021
   Section: CSCI 355
-
   This is the enrollment.html page for the QCfirst website. 
 -->
 <html class = "bg-student" lang="en-US">
@@ -11,7 +10,11 @@
     <meta charset="UTF-8">
     <title>QCFirst</title>
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/index.js" defer></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/search.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -42,29 +45,23 @@
                 </br></h4>
             </div>
             <section >
-                <section class = "section-wrap" id="search-course">
+                <div id="update"></div>
+                <section class="section-wrap">
                     <div class="content-wrap">
-                        <input type="text" placeholder="Search For Course...">
-                        <img src = "img/magnifying-glass-4186151_640.png" alt="searchbar" width="40" height="40">
+                        <label for="search-bar">Courses Live Search: </label>
+                        <input id="search-bar" type="search" id="search-bar" name="search-bar" placeholder="Search For Course ID/Name...">
+                        <img class="responsive" src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
+                        <ul id="course-list"></ul>
                     </div>
-                    <div class="content-wrap" >
-                        <ul>
-                            <li id = "courselist"><input type="checkbox">Course #1</li><br>
-                            <li id = "courselist"><input type="checkbox">Course #2</li><br>
-                            <li id = "courselist"><input type="checkbox">Course #3</li><br>
-                        </ul>  
-                    </div>
-                    <a class="btn">Enroll</a>
-                 </section>
-                  <h3 id = "background-1"> Schedule </h3>
+                    <!-- <a class="btn" href="student-home.html">ENROLL</a> -->
+                    <input type="text" id="enroll-course" placeholder="Enter Course ID to enroll..."/>
+                    <input type="button" id="btnAdd" value="Enroll" onclick="addItem()">
+                </section>
+                <h3 id = "background-1"> Schedule </h3>
                 <section class = "section-wrap" id="enrollment-wrap">
                     <div class="content-wrap">
-                        <ol class = "schedule-1">
-                            <li>Course #1 9:15AM to 10:30AM MW</li>
-                            <li>Course #2 1:40PM to 2:55PM MW</li>   
-                            <li>Course #3 12:00PM to 1:15PM TT</li>
-                            <li>Course #4 1:40PM to 3:30PM TT</li>
-                            <li>Course #5 2:00PM to 4:30PM F</li>
+                        <ol class = "schedule-1" id="student-courses">
+                            <li>ANTH 102 12:00PM to 1:45PM Tuesday/Thursday</li>
                         </ol>
                     </div>
                     <a class="btn" href="student-home.html">Back</a>
@@ -76,4 +73,18 @@
             </footer>
         </main>
     </body>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqDv2ClaYawwiiy4DBid_KU-L4uR1r99I",
+            authDomain: "qcfirst-instructor.firebaseapp.com",
+            projectId: "qcfirst-instructor",
+            storageBucket: "qcfirst-instructor.appspot.com",
+            messagingSenderId: "1017506719240",
+            appId: "1:1017506719240:web:d1dae44709c9bb037d53bd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+    </script>
 </html>

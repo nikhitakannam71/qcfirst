@@ -3,7 +3,6 @@
   Name: Nikhita Kannam, Christen De Ocampo
   Date: 04/20/2021
   Section: CSCI 355
-
   This is the management.html page for the QCfirst website. 
 -->
 <html class="bg-instr" lang="en-US">
@@ -11,10 +10,7 @@
     <meta charset="UTF-8">
     <title>QCFirst</title>
     <link href="css/style.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="js/index.js" defer></script>
+    <script src="js/search.js" defer></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
@@ -42,62 +38,21 @@
             <div class="content-wrap">
                 <h2 id="background">Manage Courses</h2>
             </div>
-            <section class="section-wrap">
-                <div class="content-wrap">
-                    <div id="courses-bg">
-                        <h2 class="instr-courses" id="background">Courses
-                            <input id="search-bar" type="text" placeholder="Search For Course...">
-                            <img class="responsive" src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
-                        </h2>
-                    </div>
-                </div>
             </section>
+            <div id="update"></div>
             <section class="section-wrap">
                 <div class="content-wrap">
-                        <div class="scroll">
-                            <div class="course-stuff">
-                                <button class="course-collapse">Course Name #1<input id="checkbox-style" type="checkbox"></button>
-                                <div class="content">
-                                    <nav>
-                                        <ul id="background"> 
-                                            <li>ID: 001</li>
-                                            <li>Semester: Fall 2021</li>
-                                            <li>Department: Masters of Dark Art</li>
-                                            <li>Instructor: John Constantine</li>
-                                            <li>Roster of Students: 25</li>
-                                            <li>Description: Prepare mate.</li>
-                                            <li>Schedule: M T W T F</li>
-                                            <li>Capacity: 0</li>
-                                            <li>Enrollment Deadline: June 25, 2021</li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <button class="course-collapse">Course Name #2<input id="checkbox-style" type="checkbox"></button>
-                                <nav>
-                                    <ul id="background"> 
-                                        <li>ID: 002</li>
-                                        <li>Semester: Fall 2021</li>
-                                        <li>Department: Math</li>
-                                        <li>Instructor: Britney Spears</li>
-                                        <li>Roster of Students: 100</li>
-                                        <li>Description: Math is fun. But wear masks.</li>
-                                        <li>Schedule: M T W T F</li>
-                                        <li>Capacity: 100</li>
-                                        <li>Enrollment Deadline: June 25, 2021</li>
-                                    </ul>
-                                </nav>
-                                <button class="course-collapse">Course Name #3<input id="checkbox-style" type="checkbox"></button>
-                                <ul></ul>
-                                <button class="course-collapse">Course Name #4<input id="checkbox-style" type="checkbox"></button>
-                                <ul></ul>
-                                <button class="course-collapse">Course Name #5<input id="checkbox-style" type="checkbox"></button>
-                                <ul></ul>
-                            </div>
-                        </div>
-                        <a class="btn" href="instr-createcourse.html">Create Course</a>
-                        <a class="btn" href="management.html">Delete Course</a>
-                        <a class="btn" href="instr-home.html">Back</a>
-                    </div> 
+                    <label for="search-bar">Courses Live Search: </label>
+                    <input id="search-bar" type="search" id="search-bar" name="search-bar" placeholder="Search For Course ID/Name...">
+                    <img class="responsive" src="img/magnifying-glass-4186151_640.png" alt="searchbar" width="15" height="15">
+                    <ul id="course-list"></ul>
+                </div>
+                 <div class="content-wrap">
+                    <a class="btn" href="instr-createcourse.html">Create Course</a>
+                    <a class="btn" href="instr-home.html">Back</a><br><br>
+                    <label for="id">Enter Course ID To Delete: </label><br>
+                    <input type="text" id="id"><br>
+                    <button class="btn" id="delete-course">Delete Course</button>
                 </div>
             </section>
             <footer class = "footer">
@@ -105,4 +60,38 @@
             </footer>
         </main>
     </body>
+    <script src = "js/jquery.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqDv2ClaYawwiiy4DBid_KU-L4uR1r99I",
+            authDomain: "qcfirst-instructor.firebaseapp.com",
+            projectId: "qcfirst-instructor",
+            storageBucket: "qcfirst-instructor.appspot.com",
+            messagingSenderId: "1017506719240",
+            appId: "1:1017506719240:web:d1dae44709c9bb037d53bd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const courseId = document.getElementById('id');
+        const remove = document.getElementById('delete-course');
+        const database = firebase.database();
+        const rootRef = database.ref('courses');
+        remove.addEventListener('click', e => {
+            e.preventDefault();
+            rootRef.child(courseId.value).remove()
+            .then(() => {
+                window.alert("Course has been deleted from database");
+            })
+            .catch(error => {
+                console.error(error);
+            })
+        })
+    </script>
 </html>

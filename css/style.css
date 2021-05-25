@@ -46,6 +46,13 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+.bg-admin { 
+    background: url(../img/bg-admin.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 header {
     background-image: linear-gradient(white, #5680E9);
 }
@@ -367,7 +374,7 @@ input[type="password"] {
 #search-course {
     display: inline-block;
     padding: 20px;
-    width: 55%;
+    width: 75%;
     border-radius: 10px;
     border-width: 2px;
     font-size: 18px;
@@ -409,9 +416,6 @@ input[type="password"] {
     display: inline-table;
 }
 
-#search-course li {
-    display: inline-table;
-}
 
 #courses li {
     display: inline-table;
@@ -444,5 +448,54 @@ input[type="password"] {
 }
 
 
+#course-list li {
+    padding: 15px;
+    margin: 11px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
 
+#course-list li:hover {
+    background-color: lightskyblue;
+    color: black;
+}
 
+#update li {
+    padding: 15px;
+    margin: 11px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+}
+
+#update {
+    background: rgba(51, 51, 51, 0.9);
+    width: 75%;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#students-list li {
+    padding: 2px;
+    padding-left: 5px;
+    margin: 2px;
+    border-radius: 2px;
+    width: 75%;
+    display: inline-block;
+}
+
+#instr-list li {
+    padding: 2px;
+    padding-left: 5px;
+    margin: 2px;
+    border-radius: 2px;
+    width: 75%;
+    display: inline-block;
+}

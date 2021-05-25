@@ -3,7 +3,6 @@
   Name: Nikhita Kannam, Christen De Ocampo
   Date: 04/20/2021
   Section: CSCI 355
-
   This is the instr-signup.html page for the QCfirst website. 
 -->
 <html class = "bg-image" lang="en-US">
@@ -11,15 +10,11 @@
     <meta charset="UTF-8">
     <title>QCFirst</title>
     <link href="css/style.css" rel="stylesheet">
-
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
     <script src="js/index.js" defer></script>
     <script src="js/instr-form.js"></script>
-
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
@@ -43,6 +38,7 @@
                         <a href="student-signIn.html">Student Sign In</a>
                         <a href="instr-signup.html" class="active">Instructor Sign Up</a>      
                         <a href="student-signup.html">Student Sign Up</a>
+                        <a href="admin-signIn.html">Admin Sign In</a>
                     </div>
                 </nav>
             </header>
@@ -73,4 +69,21 @@
             </footer>
         </main>
     </body>
+    <script src = "js/jquery.js"></script>
+    <script>
+        const first = document.getElementById('first-name');
+        const last = document.getElementById('last-name');
+        const email = document.getElementById('email-address');
+        const db = firebase.database();
+        const instrUp = db.ref('instructors');
+        const signUpBtn = document.getElementById('signIn');
+        signUpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            instrUp.child(last.value).set({
+                first_name: first.value,
+                email_address: email.value
+            });
+            window.location.href = "instr-signIn.html";
+        });
+    </script>
 </html>

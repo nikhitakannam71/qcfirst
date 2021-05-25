@@ -1,17 +1,15 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
+ var firebaseConfig = {
     apiKey: "AIzaSyAxG5BNasmBDW4DQhgvk4E5Kar4mtSWmsc",
     authDomain: "qcfirst-register.firebaseapp.com",
+    databaseURL: "https://qcfirst-register-default-rtdb.firebaseio.com",
     projectId: "qcfirst-register",
     storageBucket: "qcfirst-register.appspot.com",
     messagingSenderId: "993705978903",
     appId: "1:993705978903:web:8d1a5bbff5b8d192324052"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
-
 function signUp() {
     var email = document.getElementById("email-address");
     var firstname = document.getElementById("first-name");
@@ -28,7 +26,6 @@ function signUp() {
         }
     })
 }
-
 function signIn() {
     var email = document.getElementById("email");
     var password = document.getElementById("password");
@@ -47,12 +44,26 @@ function signIn() {
         }
     })
 }
+auth.onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        var studentName = document.getElementById("student-name");
+        var cunyID = document.getElementById("student-id");
+        var emailAddress = document.getElementById("student-email");
+        var firstname = document.getElementById("first-name");
+        var lastname = document.getElementById("last-name");
+       
+        studentName.innerHTML = firebaseUser.displayName;
+        cunyID.innerHTML = firebaseUser.uid;
+        emailAddress.innerHTML = firebaseUser.email;
 
+        console.log(firebaseUser.uid);
+        console.log(firebaseUser.displayName);
+        console.log(firebaseUser.email);
+    } else {
+        // window.location.href = 'instr-signIn.html'
+    }
+})
 function signOut() {
     auth.signOut();
     alert("Signed Out");
 }
-
-
-
-

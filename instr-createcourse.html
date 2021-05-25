@@ -12,9 +12,9 @@
     <meta charset="UTF-8">
     <title>QCFirst</title>
     <link href="css/style.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script src="js/index.js" defer></script>
+    
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
@@ -41,21 +41,21 @@
                 </nav>
             </header>
             <div class="content-wrap">
-                <h2 id="background">Enter the following course information:</h2>
+                <h2 id="background">Enter the following course information:</h2> 
             </div>
             <section class="section-wrap">
                 <div class="content-wrap">
-                    <form id="align">
+                    <form id="align" action="/management.html" method="POST">
                         <label for = "id">ID: </label>
                         <input type = "text" id = "id"><br>
+                        <label for = "course-name">Course Name: </label>
+                        <input type = "text" id = "course-name"><br>
                         <label for="semester">Semester: </label>
                         <input type="text" id="semester"><br>
                         <label for = "department">Department: </label>
                         <input type = "text" id = "department"><br>
                         <label for="instructor">Instructor: </label>
                         <input type="text" id="instructor"><br>
-                        <label for = "roster">Roster of Students: </label>
-                        <input type = "text" id = "roster"><br>
                         <label for="desc">Description: </label>
                         <input type="text" id="desc"><br>
                         <label for = "cap">Capacity: </label>
@@ -64,8 +64,9 @@
                         <input type="text" id="schedule"><br>
                         <label for = "enroll">Enrollment Deadline: </label>
                         <input type = "text" id = "enroll"><br>
+                        <button class="btn" id="create-course">Create Course</button>
+
                     </form>
-                    <a class="btn" href="management.html">Create Course</a>
                     <a class="btn" href="management.html">Back</a>
                 </div> 
             </section>
@@ -74,4 +75,28 @@
             </footer>
         </main>
     </body>
+
+    <script src = "js/jquery.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyBqDv2ClaYawwiiy4DBid_KU-L4uR1r99I",
+        authDomain: "qcfirst-instructor.firebaseapp.com",
+        projectId: "qcfirst-instructor",
+        storageBucket: "qcfirst-instructor.appspot.com",
+        messagingSenderId: "1017506719240",
+        appId: "1:1017506719240:web:d1dae44709c9bb037d53bd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+    </script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
 </html>
+

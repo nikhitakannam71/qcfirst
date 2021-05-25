@@ -3,15 +3,15 @@
   Name: Nikhita Kannam, Christen De Ocampo
   Date: 04/20/2021
   Section: CSCI 355
-  This is the instr-home.html page for the QCfirst website. 
+  This is the admin-student.html page for the QCfirst website. Admin-only.
 -->
-<html class="bg-instr" lang="en-US">
+<html class="bg-admin" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>QCFirst</title>
     <link href="css/style.css" rel="stylesheet">
     <script src="js/index.js" defer></script>
-    <script src="js/instr-form.js" defer></script>  
+    <script src="js/fetch.js" defer></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
@@ -30,37 +30,22 @@
                         <span class="bar"></span>
                     </a>
                     <div class="navbar-links">
-                        <a class="active" href="instr-signup.html">Instructor Home</a>      
-                        <a href="management.html">Course Management</a> 
-                        <a href="index.html">Sign Out</a>    
+                        <a href="admin-home.html">Admin Home</a>
+                        <a class="active" href="admin-student.html">Students</a>
+                        <a href="admin-instr.html">Instructors</a>
+                        <a href="index.html">Sign Out</a>            
                     </div>
                 </nav>
             </header>
             <div class="content-wrap">
-                <h2 id="background">Instructor Information</h2>
+                <h2 id="background">Registered Students</h2>
             </div>
             <section class="section-wrap2">
                 <div class="content-wrap">
                     <div id="instr-border-home">
-                        <h3>CUNY ID:</h3>
-                        <p id="instr-id"></p>
-                        <h3>Email Address:</h3>
-                        <p id="instr-email"></p>
+                        <ul id = "students-list"></ul>
                     </div>
                 </div>
-            </section>
-            <div class="content-wrap">
-                <h2 id="background">Available Courses</h2>
-            </div>
-            <section class="section-wrap">
-                <div class="content-wrap">                   
-                    <img src="img/course-ex.png" alt="course-image" width="100" height="100" class="responsive">
-                    <div class="content">
-                        <ul id = "course-list">
-                        </ul>
-                    </div>
-                    <a class="btn" href="management.html">Manage Courses</a>
-                </div> 
             </section>
             <footer class = "footer">
                 <p>Copyright &#169; 2021: By NC</p>
@@ -71,4 +56,18 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAxG5BNasmBDW4DQhgvk4E5Kar4mtSWmsc",
+            authDomain: "qcfirst-register.firebaseapp.com",
+            databaseURL: "https://qcfirst-register-default-rtdb.firebaseio.com",
+            projectId: "qcfirst-register",
+            storageBucket: "qcfirst-register.appspot.com",
+            messagingSenderId: "993705978903",
+            appId: "1:993705978903:web:8d1a5bbff5b8d192324052"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
 </html>
