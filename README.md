@@ -16,13 +16,11 @@ The purpose of **QCfirst** is to allow students to view their courses and enroll
 
 ## Website Link and Contributions
 **Link to our website:** 
-https://896ss-christendeo.my.cclb.io/
-
-https://nikhitakannam71.github.io/qcfirst/
+https://zuaqn-christendeo.my.cclb.io/
 
 **Contributions:**
-* **Christen:** We both made contributions to the index or Sign In page and decided upon the appropriate images to put across the website legally, including the logo and other images. In addition, I specifically worked on the pages for the instructor side, like the Instructor Sign Up Page, Instructor Home Page, Course Management Page and finally the Create Course Page which my partner decided that we should add to fullfil part of the site's requirements. I also suggested on using an online collaborative editor called Code Collab: https://codecollab.io/ alongside *Webstorm* so that we can seamlessly work on this project. I worked on the CSS for the instructor portion of the website. I also worked on connecting our code to the Firebase database to store user information and ensure user authentication. 
-* **Nikhita:** My partner and I worked on the Sign In or index.html page together. We both contributed to picking the appropriate images for the site. I worked on the pages for the student side such as Student Sign Up, Student Home Page and Enrollment Page. I pushed the HTML files to github and created the link using Github Pages, as my partner suggested. I worked on the CSS for the student portion of the website. I used to *Google Firebase* to create a project for our database so we can store user information and ensure user authentication.
+* **Christen:** We both made contributions to the index or Sign In page and decided upon the appropriate images to put across the website legally, including the logo and other images. In addition, I specifically worked on the pages for the instructor side, like the Instructor Sign Up Page, Instructor Home Page, Course Management Page and finally the Create Course Page which my partner decided that we should add to fullfil part of the site's requirements. I also suggested on using an online collaborative editor called Code Collab: https://codecollab.io/ alongside *Webstorm* so that we can seamlessly work on this project. I worked on the CSS for the instructor portion of the website. I also worked on connecting our code to the Firebase database to store user information and ensure user authentication by utilizing the Firebase documentation for backend assistance.
+* **Nikhita:** My partner and I worked on the Sign In or index.html page together. We both contributed to picking the appropriate images for the site. I worked on the pages for the student side such as Student Sign Up, Student Home Page and Enrollment Page. I pushed the HTML files to github and created the link using Github Pages, as my partner suggested. I worked on the CSS for the student portion of the website. I used to *Google Firebase* to create a project for our database so we can store user information and ensure user authentication by utilizing the Firebase documentation for backend assistance.
 
 
 ### Choice of Technologies
@@ -35,22 +33,29 @@ https://nikhitakannam71.github.io/qcfirst/
 
 
 ## Features
-* **Sign In Page:** The welcome page where students and instructors can enter their login info in the appropriate text boxes. There will be a seperate sign in page for student and instructor. If a user account doesn't exist, they can sign up by clicking the button below the *Enter* button.
-*Instructor Sign In:* https://896ss-christendeo.my.cclb.io/instr-signIn.html
-*Student Sign In:* https://896ss-christendeo.my.cclb.io/student-signIn.html
+* **Sign In Page:** The welcome page where students, instructors, and the admin can enter their login info in the appropriate text boxes. There will be a seperate sign in page for student, instructor, and admin. If a user account doesn't exist, they can sign up by clicking the button below the *Enter* button.
+*Instructor Sign In:* https://zuaqn-christendeo.my.cclb.io/instr-signIn.html
+*Student Sign In:* https://zuaqn-christendeo.my.cclb.io/instr-signIn.html
+*Admin Sign In:* https://zuaqn-christendeo.my.cclb.io/admin-signIn.html
 * **Student/Instructor Sign Up Page**: Users can enter their information to create an account. After entering their information, click *Enter* to create the account. Students and instructors will have seperate sign up pages.
-*Student Sign Up:* https://896ss-christendeo.my.cclb.io/student-signup.html
-*Instructor Sign Up:* https://896ss-christendeo.my.cclb.io/instr-signup.html
+*Student Sign Up:* https://zuaqn-christendeo.my.cclb.io/student-signup.html
+*Instructor Sign Up:* https://zuaqn-christendeo.my.cclb.io/instr-signup.html
 * **Student Home Page:**   In the student home page, students can view their personal information such as Name, CUNY ID and email address. They can also view the courses they are already enrolled in. If the student wished to enroll in a new course, they can click the *Enroll* button at the bottom of the page. 
-*Link:* https://896ss-christendeo.my.cclb.io/student-home.html
+*Link:* https://zuaqn-christendeo.my.cclb.io/student-home.html
 * **Instructor Home Page:** In the instructor home page, instructors can view their personal information including name, ID number, and email address as well as the list of courses they have created. To manage courses, click the *Manage Courses* button below the picture section.
-*Link:* https://896ss-christendeo.my.cclb.io/instr-home.html
+*Link:* https://zuaqn-christendeo.my.cclb.io/instr-home.html
+* **Admin Home Page:**   In the admin home page, admin can view the list of all available courses created in the database. 
+*Link:* https://zuaqn-christendeo.my.cclb.io/admin-home.html
 * **Enrollment Page:** This page allows students to search and enroll in new classes. Enter the course in the search bar. Once the user finds the course they are looking for they can select that course and click *Enroll*. Students can also view their updated schedule. 
-*Link:* https://896ss-christendeo.my.cclb.io/enrollment.html
+*Link:* https://zuaqn-christendeo.my.cclb.io/enrollment.html
 * **Course Management Page:** Strictly for instructors; they can create and delete any desired course by clicking on the appropriate buttons below the list of courses that's displayed. To find a *specific course*, instructors can type the course name in the search text box. To find more information about a course, such as its unique number, department, description, enrolmment deadline, and etc. click on the *arrow down* button next to the course name to reveal a dropdown that contains these unique information. 
-*Link:* https://896ss-christendeo.my.cclb.io/management.html
+*Link:* https://zuaqn-christendeo.my.cclb.io/management.html
 * **Create Course Page:** Strictly for instructors. This page allows instructors to create a new course. They have to enter the course information such as course ID, department, description, capacity, etc. After entering their information, the instructor can click *Create Course* to create a new course. 
-*Link:* https://896ss-christendeo.my.cclb.io/instr-createcourse.html
+*Link:* https://zuaqn-christendeo.my.cclb.io/instr-createcourse.html
+* **Admin Students Page:**   In the admin students page, admin can view the list of all available students registered in the database. 
+*Link:* https://zuaqn-christendeo.my.cclb.io/admin-student.html
+* **Admin Instructors Page:**   In the admin instructors page, admin can view the list of all available instructors registered in the database. 
+*Link:* https://zuaqn-christendeo.my.cclb.io/admin-instr.html
 
 
 ## Visual Design V.S Final Design
